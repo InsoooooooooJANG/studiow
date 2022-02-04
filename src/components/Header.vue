@@ -3,12 +3,12 @@
     <img class="logo" src="../assets/logo.png" alt="logo"/>
 
     <div :class="topNavClass" id="myTopnav">
-      <a href="home" class="active">Home</a>
-      <a href="guide">Guide</a>
-      <a href="room">Room</a>
-      <a href="portfolio">Portfolio</a>
-      <a href="schedule">Schedule</a>
-      <a href="reservation">Reservation</a>
+      <a href="/" :class="activeClass=='home'? 'active':''">Home</a>
+      <a href="guide" :class="activeClass=='guide'? 'active':''">Guide</a>
+      <a href="room" :class="activeClass=='room'? 'active':''">Room</a>
+      <a href="portfolio" :class="activeClass=='portfolio'? 'active':''">Portfolio</a>
+      <a href="schedule" :class="activeClass=='schedule'? 'active':''">Schedule</a>
+      <a href="reservation" :class="activeClass=='reservation'? 'active':''">Reservation</a>
       <a href="javascript:void(0);" class="icon" @click="toggleMenu()">
         <i class="fa fa-bars"></i>
       </a>
@@ -20,7 +20,10 @@
   export default {
     name: 'Header',
     props: {
-      
+      activeClass: {
+        type:String,
+        default:'home'
+      }
     },
     data(){
       return{

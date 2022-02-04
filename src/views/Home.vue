@@ -1,6 +1,6 @@
 <template>
   <div class="home" :class="homeClassList[homeClassIndex]">
-    <Header/>
+    <Header :activeClass="'home'"/>
     <div class="arrow">
       <div class="left" @click="showPrevBack()">&lt;</div>
       <div class="right" @click="showNextBack()">&gt;</div>
