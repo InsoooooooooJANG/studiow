@@ -1,9 +1,7 @@
 <template>
+  <Header :activeClass="'guide'"/>
   <div class="guide">
-    <Header :activeClass="'guide'"/>
-    <div class="guidline">
-      test
-    </div>
+    <span id="title">Guide</span>
   </div>
 </template>
 
@@ -16,3 +14,15 @@
     }
   }
 </script>
+
+<style scoped>
+.guide{
+  text-align: center;
+  margin-top:5%;
+}
+
+#title{
+  font-size:2rem;
+  font-weight: bold;
+}
+</style>

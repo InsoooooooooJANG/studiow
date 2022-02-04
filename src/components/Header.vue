@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <a class="header" href="/">
     <img class="logo" src="../assets/logo.png" alt="logo"/>
 
     <div :class="topNavClass" id="myTopnav">
@@ -13,7 +13,7 @@
         <i class="fa fa-bars"></i>
       </a>
     </div>
-  </div>
+  </a>
 </template>
 
 <script>
@@ -44,6 +44,7 @@
 
 <style scoped>
 .header{
+  display: block;
   width:100%;
   height:15%;
 }
